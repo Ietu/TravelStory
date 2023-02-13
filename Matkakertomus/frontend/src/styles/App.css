@@ -1,0 +1,57 @@
+html,
+body {
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1500;
+}
+
+#app {
+    height: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #2980B9, #00CDAC, #FFFFFF);
+    background-repeat: no-repeat;
+}
+
+#nonLogged-app {
+    overflow: hidden;
+}
+
+#app>h1 {
+    color: #362a34;
+}
+
+#error-alert {
+    position: fixed;
+    z-index: 1056;
+    width: fit-content;
+    max-width: 37vh;
+    margin-top: 80px;
+    right: 8px;
+}
+
+#introduction-div {
+    width: 70vw;
+    text-overflow: ellipsis;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: calc(10px + 0.3vw);
+    color: white;
+}
+
+#introduction-div h1 {
+    font-size: calc(30px + 1.0vw);
+    text-shadow: 0 0 9px #000;
+}
+
+#introduction-div h2 {
+    font-size: calc(16px + 0.3vw);
+    line-height: 150%;
+    text-shadow: 0 0 7px #000;
+}

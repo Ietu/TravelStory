@@ -1,0 +1,90 @@
+.pohja {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Profiilikortti */
+
+.profile-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    min-width: 400px;
+    min-height: 400px;
+    max-height: 450px;
+    border-radius: 18px;
+    margin-top: 120px;
+    /*margin: 0 -5px;*/
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+/*a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover,
+a:hover {
+    opacity: 0.7;
+}*/
+
+/* END */
+
+/* Keskiboksi */
+.main {
+    margin-top: 5%;
+    margin-left: 2%;
+    /*margin: 0 5px;*/
+    font-size: 28px;
+    padding: 0 10px;
+    width: 58%;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.main .box {
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 0 grey;
+    height: 455px;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 50px;
+}
+
+.main .box table {
+    border: none;
+    font-size: 16px;
+    height: 270px;
+    width: 80%;
+}
+
+.buttons {
+    margin-top: 10%;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+/*Formin inpouteille*/
+.profile-inputs {
+    width: 300px;
+}
+
+/* End */

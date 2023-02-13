@@ -1,0 +1,81 @@
+@import url('http://fonts.cdnfonts.com/css/roboto');
+
+.sm-icons {
+    min-height: 45px;
+    width: fit-content;
+    text-align: center;
+    flex-direction: row;
+    flex-basis: 14em;
+    font-size: 30px;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 20px;
+    flex-basis: fit-content;
+}
+
+.contents {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-self: center;
+    width: 40%;
+    min-width: 27em;
+    text-align: center;
+    color: #fffafa;
+    padding: 40px;
+    border: 1px solid #fffafa;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    word-wrap: break-word;
+}
+
+.contents h1 {
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: 5em;
+    margin-top: auto;
+}
+
+span.line {
+    display: inline-block;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    min-height: 336px;
+    animation: animateBackground 16s ease-in-out infinite;
+    background-size: cover;
+}
+
+.outer {
+    left: 0px;
+    top: auto;
+    width: 100%;
+    height: 100vh;
+    min-height: 336px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.error-headers {
+    color: #fffafa;
+    text-align: center;
+}
+
+@keyframes animateBackground {
+
+    0%,
+    100% {
+        background-image: url("../images/lappi.jpg");
+    }
+
+    33% {
+        background-image: url("../images/kalajoki.jpg");
+    }
+
+    66% {
+        background-image: url("../images/kuopio.jpg");
+    }
+}

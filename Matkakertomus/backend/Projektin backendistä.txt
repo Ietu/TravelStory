@@ -1,0 +1,29 @@
+Tietokannan asennus (näkyy myös azuren backlogissa):
+
+TCP/IP
+db-Portti: 3306
+user: 
+password:
+db-name: matkakertomus
+noden portti: 3000 (Change in code)
+
+
+
+NodeJS, package-json:
+
+- dir
+- cmd -> cd 
+- npm init -y
+
+
+
+Packages
+
+- npm install mysql
+- npm install express
+- npm install body-parser
+- npm install cors
+- npm install argon2
+
+
+- table password -> "long text".

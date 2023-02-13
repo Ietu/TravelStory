@@ -1,0 +1,27 @@
+#navbar-Logged {
+    white-space: nowrap;
+    box-shadow: 0 0 15px;
+    background: rgb(46, 163, 179);
+    width: 100%;
+}
+
+.nav-item {
+    max-height: 46px;
+    align-self: center;
+}
+
+#navbar-Logged a {
+    font-size: 20px;
+    color: white;
+    align-self: center;
+    white-space: nowrap;
+}
+
+#navbar-Logged span {
+    font-size: 30px;
+    color: white;
+}
+
+.dropdown-menu {
+    background: rgb(41, 146, 160);
+}

@@ -1,0 +1,36 @@
+#navbar-nonLogged {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-item {
+    max-height: 46px;
+    align-self: center;
+}
+
+#navbar-nonLogged a {
+    font-size: 20px;
+    color: black;
+    align-self: center;
+    white-space: nowrap;
+}
+
+#navbar-nonLogged span {
+    font-size: 30px;
+    color: black;
+}
+
+.loginsignin-btn {
+    white-space: nowrap;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    width: fit-content;
+    align-self: center;
+}

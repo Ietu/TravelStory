@@ -1,0 +1,137 @@
+.container1 {
+  padding-left: 25px;
+  padding-top: 25px;
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+#omatMatkat {
+  border-collapse: collapse;
+  border: 1px solid rgb(200, 200, 200);
+
+}
+
+#omatMatkat td,
+#omatMatkat th {
+  border: 1px solid rgb(200, 200, 200);
+  padding: 12px;
+}
+
+#omatMatkat th {
+  position: sticky;
+}
+
+#omatMatkat tr:hover {
+  background-color: #ddd;
+}
+
+#omatMatkat th {
+  padding: 10px;
+  text-align: center;
+  background-color: #4c7aaf;
+  color: white;
+}
+
+/*.modalBackground {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(200, 200, 200);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer {
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+  
+  .modalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .modalContainer .body {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  
+  .modalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }*/
+
+
+#omatmatkat-modal {
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+}
+
+/*Tätä ei kait ole koodissa*/
+#omatmatkat-modal-title {
+  background-color: white;
+  height: 75px;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+/*Tätä ei kait ole koodissa*/
+#omatmatkat-modal-body {
+  background-color: white;
+  height: 250px;
+  padding-left: 10px;
+}
+
+#omatmatkat-modal-footer {
+  background-color: white;
+  height: 75px;
+}
+
+/*Tätä ei kait ole koodissa*/
+#omatmatkat-modalContainer {
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10%;
+  align-items: center;
+  width: 750px;
+  height: 400px;
+}

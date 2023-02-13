@@ -1,0 +1,124 @@
+#matkakohde-div {
+    background-color: aliceblue;
+    width: 200px;
+    height: 150px;
+}
+
+#matkakohde-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 80px;
+    margin-bottom: 5px;
+}
+
+#matkakohde-div {
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    margin: 0.5em;
+    min-width: 20em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 25em;
+    height: 15em;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    color: white;
+}
+
+#matkakohde-div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.error-headers {
+    color: #fffafa;
+    text-align: center;
+    padding: 10px;
+}
+
+.otsikko {
+    font-size: 60px;
+    user-select: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 90%;
+}
+
+.ala-otsikko {
+    margin-top: 10px;
+    font-size: 30px;
+    user-select: none;
+    position: absolute;
+    left: 1%;
+    line-height: 110%;
+    inline-size: max-content;
+}
+
+#matkakohde-container div:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#matkakohde-container div:hover>img {
+    filter: brightness(90%);
+}
+
+#sticky-div {
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#inputgroup {
+    align-self: center;
+    margin-top: 10px;
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+    flex-basis: calc(23.2em + 6.0vw);
+}
+
+#sort-div-clickable {
+    background-color: #0d6efd;
+    color: white;
+    padding: 23px;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border-radius: 50%;
+    line-height: 110%;
+    font-size: small;
+    font-weight: bold;
+    user-select: none;
+    margin-top: 10px;
+}
+
+#sort-div-clickable:hover {
+    cursor: pointer;
+}
+
+#add-btn {
+    height: fit-content;
+    width: fit-content;
+    margin-top: 10px;
+    margin-right: 1.25em;
+    align-self: center;
+}
