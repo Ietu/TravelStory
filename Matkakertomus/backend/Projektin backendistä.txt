@@ -1,11 +1,9 @@
-Tietokannan asennus (näkyy myös azuren backlogissa):
-
 TCP/IP
-db-Portti: 3306
+db-Portti: ----
 user: 
 password:
 db-name: matkakertomus
-noden portti: 3000 (Change in code)
+node port: ---- (Change in code)
 
 
 
