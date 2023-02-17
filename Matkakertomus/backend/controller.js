@@ -1,6 +1,6 @@
 'use strict'
-// Tänne tulee palvelimen yhteyden luonti ja SQL-queryt, jotka exportataan server.js:ään.
-// server:ssa suoritetaan tuodut queryt(funktiot) riippuen minkä url:in palvelin saa.
+// yhteyden luonti ja SQL-queryt, jotka exportataan server.js:
+// server:ssa suoritetaan tuodut queryt(funktiot)
 
 const mysql = require('mysql');
 const argon2 = require('argon2');
@@ -113,14 +113,12 @@ module.exports =
                         console.log("Data = " + JSON.stringify(req.body));
                         async function Verify() {
                             const correct = await argon2.verify(db_password, password);
-                            //db_password === password VAIHDETTU JOTTA PÄÄSEE KIRJAUTUMAAN!
-                            //if (db_password === password) {
+      
                             if (correct) {
                                 let userID = results[0].idmatkaaja;
                                 let userName = results[0].nimimerkki;
                                 console.log("Salasanat täsmää");
-                                // JWT https://www.youtube.com/watch?v=mbsmsi7l3r4&ab_channel=WebDevSimplified
-                                // backend-kansiossa näkyvä .env-tiedosto sisältää secret-tokenit JWT:tä varten
+  
                                 const user = {
                                     id: userID,
                                     userName: userName
@@ -143,7 +141,7 @@ module.exports =
         }
         fetchUser();
     },
-    // Matkakohteiden GET
+
     getMatkakohteet: async function (req, res) {
 
         var sql = "SELECT * FROM matkakohde";
@@ -164,7 +162,7 @@ module.exports =
         }
         fetchKohteet();
     },
-    // Matkakohteen haku nimellä
+
     getMatkakohdeByName: async function (req, res) {
 
         let kohde = req.query.kohde || '';
@@ -192,7 +190,7 @@ module.exports =
             fetchKohteet();
         }
     },
-    // Matkakohde POST
+
     postMatkakohde: async function (req, res) {
         const kohde = req.body.kohdenimi;
         const maa = req.body.maa;
@@ -224,7 +222,7 @@ module.exports =
             }
         });
     },
-    // Matkakohteen poisto
+
     deleteMatkakohde: async function (req, res) {
         const id = req.body.id;
         var check_sql = "SELECT idmatkakohde FROM tarina WHERE idmatkakohde='" + id + "'";
@@ -262,7 +260,7 @@ module.exports =
                     res.status(400).json({ "status": "Ei toimi" });
                     return false;
                 } else {
-                    // console.log("Ei SQL virhettä, Data = " + JSON.stringify(results));
+
                     if (fetchResponse) {
                         if (results && results.length > 0) {
                             console.log("Poisto ei mahdollinen koska löytyy tarinat taulusta");
@@ -500,11 +498,8 @@ module.exports =
     },
     //Omatmatkat GET
     getOmatmatkat: async function (req, res) {
-        //const id = req.body.idmatkaaja;
-        //let testiID = req.query.testID
         var id = req.params.id;
         var sql = `SELECT * FROM matka WHERE idmatkaaja = ${id}`;
-        //var sql = "SELECT * FROM matka";
         console.log("QUERY: " + sql);
 
         async function fetchOmatmatkat() {
