@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Otetaan käyttöön body-parser, jotta voidaan html-requestista käsitellä viestin body post requestia varten... *
 var bodyParser = require('body-parser');
-// Pyyntöjen reitittämistä varten voidaan käyttää Controllereita
+
 var controller = require('./controller');
 
 const hostname = 'localhost';
@@ -19,13 +19,13 @@ const port = 3000;
 // CORS middleware
 var allowCrossDomain = function (req, res, next) {
     res.header('Access-Controll-Allow-Origin', '*');
-    // Jos haluttaisiin avata hakuja joidenkin ehtojen perusteella, niin määritettäisiin näin: 
+
     res.header('Access-Controll-Allow-Methods', 'GET, PUT, POST, DELETE');
     res.header('Access-Controll-Allow-Headers', 'Content-Type');
     next();
 }
 
-// Multerilla käsitellään tiedostoja
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public/images/')
@@ -45,7 +45,6 @@ app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
 
-// Staattiset tiedostot, esim. kuvat, tyylitiedostot, scriptit käyttöliittymää varten
 app.use(express.static('public'));
 
 function authenticateToken(req, res, next) {
@@ -60,17 +59,13 @@ function authenticateToken(req, res, next) {
     })
 };
 
-// !!!REST API Matkakertomus!!!
 
-// Kirjautuminen START
 app.route('/User/signin')
     .post(controller.createUser);
 
 app.route('/User/login')
     .post(controller.loginUser);
-// Kirjautuminen END
 
-//Matkakohteet START
 app.route('/matkakohteet')
     .get(/*authenticateToken, */controller.getMatkakohteet);
 
@@ -85,34 +80,32 @@ app.route('/matkakohteet/deleteMatka')
 
 app.route('/matkakohteet/updateMatka')
     .put(authenticateToken, controller.updateMatkakohde);
-//Matkakohteet END
 
-/* Omat tiedot START */
+
+
 app.route('/matkaaja/haeMatkaaja/:id')
     .get(controller.getMatkaaja);
 
 app.route('/matkaaja/updateMatkaaja')
     .put(controller.updateMatkaaja);
-/* Omat tiedot END */
 
-// Jäsenet START
+
+
 app.route('/jasenet')
     .get(authenticateToken, controller.getJasenet);
 
-// Tämä kesken /Kristian
+
 app.route('/jasenet/getJasen')
     .get(authenticateToken, controller.getJasenByName);
 
-// Jäsenet END
 
-// Matkat START
 app.route('/omatmatkat/:id')
     .get(/*authenticateToken,*/ controller.getOmatmatkat/*, controller.getTarina*/);
 
 app.route('/porukanmatkat')
     .get(/*authenticateToken,*/ controller.getPorukanmatkat);
 
-//Tarinat start
+
 app.route('/tarina')
     .get(/*authenticateToken,*/ controller.getTarina);
 
